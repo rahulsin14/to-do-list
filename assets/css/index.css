@@ -1,0 +1,130 @@
+body{
+    background-color: blueviolet;
+}
+header{
+    text-align: center;
+    color:#ffeb3b;
+}
+#main_body{
+    margin: auto;
+    background-color: white;
+    height: 20%;
+    width: 40%;
+    font-family: Arial;
+}
+#full_form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e5e5;
+}
+
+#down_part{
+    width: 99.5%;
+    height: 50%;
+    display: flex;
+    border: 1px solid #e5e5e5;
+}
+#down_part>div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    border: 1px solid #e5e5e5;
+}
+.down_part{
+    color: #444444;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: small;
+    height: 30%;
+    width: 100%;
+}
+.down{
+    color: #444444;
+    height: 30%;
+    width: 100%;
+}
+#main{
+    color: #444444;
+    margin-left: -40px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#form_data{
+    border-top: 2px solid #e5e5e5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#list{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    
+}
+#check{
+    width: 10%;
+    height: 30%;
+    text-align: center;
+}
+#check input{
+    width: 100%;
+    height: 70%;
+}
+
+#des_date{
+    width: 70%;
+    height: 100%;
+}
+#cata{
+    height: 40%;
+    width: 20%;
+    border-radius: 50px;
+    background-color: goldenrod;
+    text-align: center;
+    padding-top: 12px;
+    font-weight: bolder;
+}
+#description{
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height:50%;
+    width: 100%;
+}
+::placeholder { 
+    color: #d8d8d8;
+    opacity: 1;
+  }
+#description label{
+    color: #444444;
+    font-size: small;
+    height: 30%;
+    width: 100%;
+}
+#description input{
+    color: #444444;
+    height: 30%;
+    width: 90%;
+}
+#buttons{
+    outline: none;
+    border:none;
+    text-align: center;
+    margin-top: 10px;
+}
+#buttons button{
+    width: 150px;
+    height: 50px;
+}
+#dess{
+    font-weight: bolder;
+}

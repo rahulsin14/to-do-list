@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+        <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/e11b3a9c20.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/index.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>TODO APP</h1>
+        </header>
+        <div id="main_body">
+            <form action="/to-do" method="POST">
+                <div id="full_form">
+                    <div id="description">
+                        <label for="des">DESCRIPTION</label>
+                        <input style="outline:none ; border:none; color:#ff9800; font-weight: bolder;" id="des" type="text" name="description" placeholder="What do you need to do?" required placeholder="What do you need to do">
+                    </div>
+                    <div id="down_part">
+                        <div id="category">
+                            <label for="cat" class="down_part">Category</label>
+                            <select style="outline:none ; border:none;" name="category" id="cat" class="down">
+                                <option value="Select_Category">Select Category</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <div id="date">
+                            <label for="date" class="down_part">Due Date</label>
+                            <input style="outline:none ; border:none;" class="down" type="date" name="date" placeholder="dd/mm/yyyy" required>
+                        </div>
+                    </div>
+                </div> 
+                <div id="buttons">   
+                    <button style="background-color: #444444; color: white;" type="submit"><i class="fas fa-plus"></i> ADD TASK</button>
+                    <button style="background-color: #ee351e; color: white;" type="submit" form="delete-form"><i class="fas fa-trash-alt icon" ></i>DELETE TASKS</button>
+                </div>
+            </form>
+            <form action="/delete-item" method="POST" id="delete-form" name="delete-form">     
+                <ul id="main">
+                    <% for (let i of Tasks){%>
+                        <div id="form_data">
+                        <div id="list">
+                            <div id="check">
+                                <input type="checkbox" name="<%= i.id %>">
+                            </div>
+                            <div id="des_date">  
+                                <p id="dess"><%=i.Description%></p>
+                                <div>
+                                    <i class="far fa-calendar-alt cal-icon"></i><span style="font-weight: bolder;font-size: small; margin-left: 5px; color: lightcoral;"><%=i.Date%></span></div>
+                                </div>
+                            <p id="cata"><%=i.Category%></p>
+                        </li>
+                        </div>
+                    <%}%>
+                </ul>
+            </form>
+    </div>
+    </body>
+</html>
